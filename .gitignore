@@ -3,3 +3,4 @@ venv/
 pyrightconfig.json
 solutions.db
 solutions.csv
+__pycache__/

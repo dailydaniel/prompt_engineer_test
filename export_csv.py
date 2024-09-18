@@ -1,14 +1,19 @@
 import sqlite3
 import pandas as pd
 
-# Подключение к базе данных
-conn = sqlite3.connect('solutions.db')
 
-# Чтение данных в DataFrame
-df = pd.read_sql_query("SELECT * FROM solutions", conn)
+def export(save=True):
 
-# Сохранение в CSV
-df.to_csv('solutions.csv', index=False)
+    conn = sqlite3.connect('solutions.db')
 
-# Закрытие соединения
-conn.close()
+    df = pd.read_sql_query("SELECT * FROM solutions", conn)
+
+    conn.close()
+
+    if save:
+        df.to_csv('solutions.csv', index=False)
+    else:
+        return df
+
+if __name__ == "__main__":
+    export()

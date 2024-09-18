@@ -40,6 +40,12 @@ CREATE TABLE IF NOT EXISTS solutions (
 ''')
 conn.commit()
 
+st.set_page_config(
+    page_title="prompt engineer test",
+    page_icon="🤖",
+    layout="wide",
+)
+
 st.title("Тестовое задание для промпт инженера")
 
 # Поле для ввода ФИО

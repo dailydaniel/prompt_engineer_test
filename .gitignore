@@ -1,0 +1,5 @@
+.env
+venv/
+pyrightconfig.json
+solutions.db
+solutions.csv

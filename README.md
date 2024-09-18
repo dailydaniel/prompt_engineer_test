@@ -37,7 +37,7 @@ docker run -d -p 8501:8501 -p 8503:8503 pen-test-streamlit
 
 ```bash
 python -m venv venv
-venv\Scripts\activate
+source venv/bin/activate
 ```
 
 #### Для macOS/Linux:
